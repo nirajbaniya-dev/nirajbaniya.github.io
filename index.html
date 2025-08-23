@@ -13,6 +13,7 @@
   <header class="hero">
     <div class="hero-overlay">
       <div class="hero-content">
+        <img src="profile.jpg" alt="Niraj Man Baniya" class="profile-pic">
         <h1 class="animated-text">Niraj Man Baniya</h1>
         <p>Brand Communication & Marketing Professional</p>
         <a href="#contact" class="btn-primary">Get In Touch</a>
@@ -23,90 +24,57 @@
   <!-- Navigation -->
   <nav class="navbar">
     <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
+    <a href="#portfolio">Portfolio</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <!-- About Section -->
   <section id="about" class="about">
     <h2>About Me</h2>
-    <p>I am a result-oriented Brand Communication & Marketing professional with extensive experience in strategy, brand management, campaigns, and team leadership. Skilled in delivering impactful results and increasing brand visibility.</p>
+    <p>I am a result-oriented Brand Communication & Marketing professional with extensive experience in strategy, brand management, campaigns, and team leadership. Professional experience is available upon request via email.</p>
   </section>
 
-<!-- Experience Section
-<section id="experience" class="experience">
-    <h2>Professional Experience</h2>
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio">
+    <h2>Portfolio</h2>
     <div class="cards">
       <div class="card">
-        <h3>Chief Manager – Brand Communication & Marketing</h3>
-        <p>Chaudhary Group | Jan 2025 – Present</p>
+        <h3>Project 1</h3>
+        <p>Dummy project description – showcase your marketing campaigns here.</p>
       </div>
       <div class="card">
-        <h3>AGM – Head of Brand Communication</h3>
-        <p>Shanker Group | Jul 2017 – Apr 2023</p>
+        <h3>Project 2</h3>
+        <p>Dummy project description – showcase your creative work here.</p>
       </div>
       <div class="card">
-        <h3>Manager – Brand Communication & Marketing</h3>
-        <p>Chaudhary Group | Dec 2010 – Dec 2016</p>
+        <h3>Project 3</h3>
+        <p>Dummy project description – showcase your achievements here.</p>
       </div>
-    </div>
-</section>
--->
-  
-  <!-- Projects Section -->
-  <section id="projects" class="projects">
-    <h2>Projects & Associations</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Leo Club of Kathmandu</h3>
-        <p>Charter Secretary (2004) – Initiated social activities like peace candle rallies and water distribution drives.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="skills">
-    <h2>Skills</h2>
-    <div class="skill-bar">
-      <p>Brand Strategy</p>
-      <div class="bar"><div class="progress" style="width: 90%"></div></div>
-    </div>
-    <div class="skill-bar">
-      <p>Marketing Communication</p>
-      <div class="bar"><div class="progress" style="width: 85%"></div></div>
-    </div>
-    <div class="skill-bar">
-      <p>Team Leadership</p>
-      <div class="bar"><div class="progress" style="width: 80%"></div></div>
     </div>
   </section>
 
   <!-- Contact Section -->
-<section id="contact" class="contact">
+  <section id="contact" class="contact">
     <h2>Contact Me</h2>
     <p>Email: <a href="mailto:nirajbaniya@gmail.com">nirajbaniya@gmail.com</a></p>
-    <!-- <p>Phone: 9841260000</p> --> <!-- Mobile hidden -->
     <div class="social-icons">
       <a href="#"><i class="fab fa-linkedin"></i></a>
       <a href="#"><i class="fab fa-twitter"></i></a>
       <a href="#"><i class="fab fa-facebook"></i></a>
     </div>
     <a href="mailto:nirajbaniya@gmail.com" class="btn-primary">Send Email</a>
-</section>
+  </section>
 
   <footer>
     <p>&copy; 2025 Niraj Man Baniya | All Rights Reserved</p>
   </footer>
 
   <script>
-    // Simple text animation
+    // Animated text effect
     const text = document.querySelector('.animated-text');
     let idx = 0;
     const str = text.textContent;
     text.textContent = '';
-
     function typeWriter() {
       if(idx < str.length) {
         text.textContent += str.charAt(idx);
@@ -118,5 +86,3 @@
   </script>
 </body>
 </html>
-
-
