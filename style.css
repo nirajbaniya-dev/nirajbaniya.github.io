@@ -1,157 +1,74 @@
-/* ========================
-   Global Styles
-======================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+/* ===== Global ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+body { background: #f5f5f5; color: #333; scroll-behavior: smooth; }
 
-body {
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
+/* ===== Hero Section ===== */
+.hero {
+  background: url('https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+  height: 100vh;
+  position: relative;
 }
-
-/* ========================
-   Header
-======================== */
-header {
-    background-color: #0d47a1; /* professional blue */
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+.hero-overlay {
+  background-color: rgba(13, 71, 161, 0.75);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  color: #fff;
+  padding: 0 20px;
 }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 20px; }
+.hero p { font-size: 1.2rem; margin-bottom: 30px; }
+.btn-primary { background: #ffca28; color: #0d47a1; padding: 12px 25px; border-radius: 5px; font-weight: 600; text-decoration: none; transition: 0.3s; }
+.btn-primary:hover { background: #ffc107; }
 
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background: #0d47a1;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
+.navbar a { color: #fff; text-decoration: none; font-weight: 500; transition: 0.3s; }
+.navbar a:hover { color: #ffca28; }
 
-header p {
-    font-size: 1.2rem;
-    font-weight: 300;
-}
+/* ===== Sections ===== */
+section { padding: 80px 20px; max-width: 1000px; margin: auto; }
+section h2 { text-align: center; font-size: 2.2rem; color: #0d47a1; margin-bottom: 40px; }
 
-/* ========================
-   Navigation
-======================== */
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 10px;
-}
+/* ===== About ===== */
+.about p { max-width: 700px; margin: auto; font-size: 1.1rem; text-align: center; }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-}
+/* ===== Cards ===== */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+.card { background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 8px 15px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 15px 25px rgba(0,0,0,0.2); }
+.card h3 { margin-bottom: 10px; color: #0d47a1; }
 
-nav a:hover {
-    color: #ffca28; /* accent color */
-}
+/* ===== Skills ===== */
+.skills .skill-bar { margin-bottom: 20px; }
+.skills p { margin-bottom: 5px; font-weight: 500; }
+.bar { background: #ddd; border-radius: 20px; overflow: hidden; }
+.progress { height: 15px; background: #0d47a1; border-radius: 20px; width: 0%; animation: load 2s forwards; }
+@keyframes load { from { width: 0; } to { width: var(--width); } }
 
-/* ========================
-   Section Styling
-======================== */
-section {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
+/* ===== Contact ===== */
+.contact { background: #0d47a1; color: #fff; text-align: center; padding: 60px 20px; border-radius: 10px; }
+.contact a { display: inline-block; margin-top: 20px; }
+.social-icons a { color: #ffca28; margin: 0 10px; font-size: 1.5rem; transition: 0.3s; }
+.social-icons a:hover { color: #fff; }
 
-section h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    color: #0d47a1;
-    font-size: 2rem;
-}
+/* ===== Footer ===== */
+footer { background: #222; color: #fff; text-align: center; padding: 20px 0; }
 
-/* ========================
-   About / Bio
-======================== */
-.about p {
-    max-width: 700px;
-    margin: auto;
-    font-size: 1.1rem;
-    text-align: center;
-}
-
-/* ========================
-   Experience / Projects
-======================== */
-.experience, .projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
-
-.experience-item, .project-item {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-}
-
-.experience-item:hover, .project-item:hover {
-    transform: translateY(-5px);
-}
-
-/* ========================
-   Contact / Call-to-Action
-======================== */
-.contact {
-    background-color: #0d47a1;
-    color: #fff;
-    text-align: center;
-    padding: 50px 20px;
-    border-radius: 10px;
-}
-
-.contact a {
-    display: inline-block;
-    background-color: #ffca28;
-    color: #0d47a1;
-    padding: 12px 25px;
-    border-radius: 5px;
-    font-weight: 600;
-    text-decoration: none;
-    margin-top: 20px;
-    transition: background-color 0.3s;
-}
-
-.contact a:hover {
-    background-color: #ffc107;
-}
-
-/* ========================
-   Footer
-======================== */
-footer {
-    background-color: #222;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-}
-
-footer p {
-    font-size: 0.9rem;
-}
-
-/* ========================
-   Responsive Design
-======================== */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-    section {
-        padding: 40px 15px;
-    }
+/* ===== Responsive ===== */
+@media(max-width: 768px){
+  .hero h1 { font-size: 2.2rem; }
+  section { padding: 50px 15px; }
 }
