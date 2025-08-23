@@ -82,15 +82,15 @@ section h2 {
 }
 
 /* ========================
-   Portfolio / Projects
+   Experience / Projects
 ======================== */
-.portfolio {
+.experience, .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 }
 
-.portfolio-item {
+.experience-item, .project-item {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -98,7 +98,7 @@ section h2 {
     transition: transform 0.3s;
 }
 
-.portfolio-item:hover {
+.experience-item:hover, .project-item:hover {
     transform: translateY(-5px);
 }
 
