@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Marketing Expert and Brand Strategist with 15+ years of experience in brand communication and marketing." />
+  <meta name="description" content="Marketing Expert and Brand Strategist with 15+ years of experience in brand communication, strategic marketing, and leadership." />
   <title>Marketing Expert & Brand Strategist</title>
   <link href="style.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
@@ -11,35 +11,76 @@
 
 <body>
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero fade-in">
     <div class="overlay"></div>
     <div class="hero-content">
       <h1>Building Powerful Brands That Connect, Inspire, and Grow.</h1>
-      <p>A marketing expert and brand strategist with 15+ years of experience shaping communication and marketing for leading brands.</p>
+      <p>A marketing expert and brand strategist with over 15 years of experience leading communication and marketing strategies for renowned brands.</p>
       <div class="hero-buttons">
-        <a href="#about" class="btn">Learn More</a>
+        <a href="#summary" class="btn">Learn More</a>
         <a href="#contact" class="btn btn-outline">Contact</a>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="about">
-    <h2>About</h2>
-    <p>With over 15 years of experience across diverse industries, I help businesses define their brand voice, craft compelling stories, and drive meaningful engagement. My work combines strategic insight with creative execution to build brands that stand out and stay relevant in a competitive world.</p>
+  <!-- Professional Summary -->
+  <section id="summary" class="summary fade-in">
+    <h2>Professional Summary</h2>
+    <p>
+      A results-oriented marketing professional with extensive experience in brand communication, market strategy, and leadership. 
+      Skilled in developing integrated campaigns, driving business growth, and managing multi-disciplinary teams to deliver impactful results.
+    </p>
 
-    <ul class="skills">
-      <li>Brand Strategy & Positioning</li>
-      <li>Integrated Marketing Communication</li>
-      <li>Creative Campaign Development</li>
-      <li>Leadership & Team Empowerment</li>
-    </ul>
+    <div class="strengths">
+      <div class="card">
+        <h3>Strategic Leadership</h3>
+        <p>Led cross-functional marketing teams to deliver business-aligned strategies that strengthened brand presence and ROI.</p>
+      </div>
+      <div class="card">
+        <h3>Brand Communication</h3>
+        <p>Expert in crafting integrated campaigns that drive awareness, loyalty, and measurable engagement across diverse audiences.</p>
+      </div>
+      <div class="card">
+        <h3>Creative Direction</h3>
+        <p>Experience in transforming insights into creative communication that builds emotional connections between brands and consumers.</p>
+      </div>
+      <div class="card">
+        <h3>Leadership Values</h3>
+        <p>Known for integrity, collaboration, and innovation in developing people-centered brand strategies.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CV Profile Section -->
+  <section id="cv" class="cv fade-in">
+    <h2>CV Profile</h2>
+    <div class="cv-grid">
+      <div class="cv-text">
+        <p>
+          With a career spanning over 15 years, my expertise lies in leading strategic brand communication, corporate marketing, and campaign management for top business houses.
+          I have successfully handled marketing initiatives that strengthened market share and consumer trust, while fostering teams that deliver creativity and consistency.
+        </p>
+        <p>
+          I bring a deep understanding of consumer behavior, effective communication frameworks, and leadership experience that align marketing vision with organizational goals.
+          My passion lies in transforming brand strategy into impactful action — connecting businesses with people through purposeful storytelling.
+        </p>
+      </div>
+      <div class="cv-highlights">
+        <h3>Key Highlights</h3>
+        <ul>
+          <li>15+ years of experience in Brand Communication & Strategic Marketing</li>
+          <li>Leadership roles in top corporate groups</li>
+          <li>Expertise in Integrated Campaign Planning & Execution</li>
+          <li>Strong communication, coordination, and leadership skills</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="contact">
+  <section id="contact" class="contact fade-in">
     <h2>Contact</h2>
-    <p>For professional inquiries or to request full experience details, please reach out via email.</p>
+    <p>For professional inquiries or to request detailed experience and credentials, please reach out via email.</p>
     <p><a href="mailto:nirajbaniya@gmail.com" class="email">nirajbaniya@gmail.com</a></p>
     <a href="mailto:nirajbaniya@gmail.com" class="btn">Request Professional Experience</a>
   </section>
@@ -47,5 +88,15 @@
   <footer>
     <p>&copy; 2025 Marketing Expert Portfolio. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Fade-in on scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
