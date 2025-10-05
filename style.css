@@ -1,12 +1,12 @@
-/* Fonts & Base Setup */
+/* ====== Base & Fonts ====== */
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  background: linear-gradient(-45deg, #0d0d0d, #111, #1a1a1a, #0d0d0d);
+  background: linear-gradient(-45deg, #0a0a0a, #111, #1a1a1a, #0d0d0d);
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
   color: #eaeaea;
-  line-height: 1.6;
+  line-height: 1.7;
   scroll-behavior: smooth;
 }
 
@@ -16,22 +16,23 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Poppins', sans-serif;
-  color: #d4af37; /* gold accent */
+  color: #d4af37;
+  font-weight: 600;
 }
 
 a {
   color: #d4af37;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 a:hover {
   color: #fff;
 }
 
-/* Hero Section */
+/* ====== Hero Section ====== */
 .hero {
   position: relative;
   height: 100vh;
@@ -44,30 +45,36 @@ a:hover {
 
 .hero-content {
   z-index: 2;
-  max-width: 800px;
+  max-width: 850px;
 }
 
 .hero h1 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
 .hero p {
   font-size: 1.1rem;
   color: #ccc;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Buttons */
 .btn {
   background-color: #d4af37;
   color: #0d0d0d;
   padding: 12px 28px;
-  border-radius: 30px;
+  border-radius: 50px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin: 8px;
-  display: inline-block;
   transition: all 0.3s ease;
 }
 
@@ -88,43 +95,79 @@ a:hover {
   color: #0d0d0d;
 }
 
-/* About Section */
-.about {
+/* ====== Summary Section ====== */
+.summary {
   padding: 100px 20px;
   text-align: center;
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
 }
 
-.about p {
+.summary p {
   font-size: 1.1rem;
   color: #ccc;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
-.skills {
-  list-style: none;
-  padding: 0;
+.strengths {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
 }
 
-.skills li {
+.card {
   background: #1a1a1a;
   border: 1px solid #333;
-  padding: 15px;
-  border-radius: 10px;
-  color: #eaeaea;
+  border-radius: 12px;
+  padding: 25px;
   transition: transform 0.3s ease, border 0.3s ease;
 }
 
-.skills li:hover {
-  transform: translateY(-5px);
+.card:hover {
+  transform: translateY(-6px);
   border-color: #d4af37;
 }
 
-/* Contact Section */
+/* ====== CV Profile Section ====== */
+.cv {
+  padding: 100px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.cv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 40px;
+  align-items: start;
+}
+
+.cv-text p {
+  color: #ccc;
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+}
+
+.cv-highlights {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.cv-highlights h3 {
+  color: #d4af37;
+  margin-bottom: 15px;
+}
+
+.cv-highlights ul {
+  list-style: none;
+  padding-left: 0;
+  color: #ccc;
+  line-height: 1.8;
+}
+
+/* ====== Contact Section ====== */
 .contact {
   text-align: center;
   padding: 100px 20px;
@@ -141,23 +184,29 @@ a:hover {
   font-weight: 600;
 }
 
+/* ====== Footer ====== */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   font-size: 0.9rem;
   color: #777;
-  background: #0a0a0a;
+  background: #080808;
 }
 
-/* Responsive */
+/* ====== Scroll Animation ====== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ====== Responsive ====== */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 1.7rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-  .skills {
-    grid-template-columns: 1fr;
-  }
+  .hero h1 { font-size: 1.9rem; }
+  .hero p { font-size: 1rem; }
+  .cv-grid { grid-template-columns: 1fr; }
 }
