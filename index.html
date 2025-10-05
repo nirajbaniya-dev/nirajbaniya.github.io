@@ -1,86 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Niraj Man Baniya | Marketing Expert</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Marketing Expert and Brand Strategist with 15+ years of experience in brand communication and marketing." />
+  <title>Marketing Expert & Brand Strategist</title>
+  <link href="style.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
 </head>
-<body>
 
-  <!-- Hero Section with Background Video -->
-  <section class="hero" id="home">
-    <video autoplay muted loop id="bg-video">
-      <source src="background.mp4" type="video/mp4">
-    </video>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
     <div class="overlay"></div>
     <div class="hero-content">
-      <img src="profile.jpg" alt="Niraj Man Baniya" class="profile">
-      <h1 class="glow-text">Niraj Man Baniya</h1>
-      <p class="sub-text">Marketing Expert</p>
-      <p class="exp">15+ Years of Experience in Brand Communication & Strategic Marketing</p>
-      <a href="#contact" class="btn-primary">Connect With Me</a>
+      <h1>Building Powerful Brands That Connect, Inspire, and Grow.</h1>
+      <p>A marketing expert and brand strategist with 15+ years of experience shaping communication and marketing for leading brands.</p>
+      <div class="hero-buttons">
+        <a href="#about" class="btn">Learn More</a>
+        <a href="#contact" class="btn btn-outline">Contact</a>
+      </div>
     </div>
   </section>
 
   <!-- About Section -->
-  <section class="about" id="about">
-    <h2>About Me</h2>
-    <p>
-      I am a passionate Marketing Expert with over 15 years of experience driving brand growth, customer engagement, and strategic communication for leading brands. 
-      My approach blends creativity, data-driven decision-making, and leadership to build brands that inspire, connect, and grow sustainably.
-    </p>
-  </section>
+  <section id="about" class="about">
+    <h2>About</h2>
+    <p>With over 15 years of experience across diverse industries, I help businesses define their brand voice, craft compelling stories, and drive meaningful engagement. My work combines strategic insight with creative execution to build brands that stand out and stay relevant in a competitive world.</p>
 
-  <!-- Portfolio Section -->
-  <section class="portfolio" id="portfolio">
-    <h2>Portfolio</h2>
-    <div class="portfolio-grid">
-      <div class="port-card">
-        <h3>Brand Evolution Campaign</h3>
-        <p>Directed a successful nationwide rebranding initiative — improving engagement and brand recall by 45%.</p>
-      </div>
-      <div class="port-card">
-        <h3>Digital Growth Strategy</h3>
-        <p>Developed and executed digital campaigns achieving 3x ROI with influencer and social activations.</p>
-      </div>
-      <div class="port-card">
-        <h3>Integrated Marketing Model</h3>
-        <p>Built a marketing model integrating data analytics and storytelling, leading to measurable business growth.</p>
-      </div>
-    </div>
+    <ul class="skills">
+      <li>Brand Strategy & Positioning</li>
+      <li>Integrated Marketing Communication</li>
+      <li>Creative Campaign Development</li>
+      <li>Leadership & Team Empowerment</li>
+    </ul>
   </section>
 
   <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <h2>Let's Connect</h2>
-    <p>
-      For collaborations, partnerships, or consulting inquiries — feel free to reach out directly.
-    </p>
-    <a href="mailto:nirajbaniya@gmail.com" class="btn-primary">Email: nirajbaniya@gmail.com</a>
-    <div class="socials">
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-    </div>
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>For professional inquiries or to request full experience details, please reach out via email.</p>
+    <p><a href="mailto:nirajbaniya@gmail.com" class="email">nirajbaniya@gmail.com</a></p>
+    <a href="mailto:nirajbaniya@gmail.com" class="btn">Request Professional Experience</a>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Niraj Man Baniya | Marketing Expert | All Rights Reserved</p>
+    <p>&copy; 2025 Marketing Expert Portfolio. All rights reserved.</p>
   </footer>
-
-  <script>
-    // Smooth fade-in animation
-    const elements = document.querySelectorAll('section');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('show');
-      });
-    }, { threshold: 0.2 });
-    elements.forEach(el => observer.observe(el));
-  </script>
 </body>
 </html>
